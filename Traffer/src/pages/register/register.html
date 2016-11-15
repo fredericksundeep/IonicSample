@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Cyient
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="test" >
+<div class="tests">
+<ion-card>
+  <ion-list>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)">
+    <ion-item-divider>
+<ion-label floating>First Name</ion-label>
+      <ion-input type="text" formControlName="firstname" name="firstname"></ion-input>
+    </ion-item-divider>
+    <ion-item-divider>
+<ion-label floating>Last Name</ion-label>
+      <ion-input type="text" formControlName="lastname" name="lastname"></ion-input>
+  </ion-item-divider>
+    <ion-item-divider>
+<ion-label floating>Username</ion-label>
+      <ion-input type="text" formControlName="username" name="username"></ion-input>
+  </ion-item-divider>
+    <ion-item-divider>
+<ion-label floating>
+Email</ion-label>
+      <ion-input type="email" formControlName="email" name="email"></ion-input>
+  </ion-item-divider>
+  <ion-item-divider>
+    <ion-label floating>
+    Mobile Number</ion-label>
+      <ion-input type="number" formControlName="mobile" name="mobile"></ion-input>
+      </ion-item-divider>
+    <ion-item-divider>
+      <ion-label floating>
+
+
+Password
+
+    </ion-label>
+      <ion-input type="password" formControlName="password" name="password"></ion-input>
+      </ion-item-divider>
+      <ion-item-divider>
+        <ion-label floating>
+
+
+  Confirm Password
+
+      </ion-label>
+        <ion-input type="password" formControlName="cnfpassword" name="cnfpassword"></ion-input>
+        </ion-item-divider>
+<p text-center>
+    <button ion-button color="cyient" >Save</button>
+</p>
+
+</form>
+  </ion-list>
+
+
+</ion-card>
+</div>
+</ion-content>

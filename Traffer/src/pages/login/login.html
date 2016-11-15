@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title >
+      Cyient
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="test"  >
+
+<div class="tests">
+<ion-card  class="cardstyle">
+  <ion-list>
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)">
+    <ion-item>
+      <ion-avatar item-left>
+   <img src="assets/img/user.png">
+ </ion-avatar>
+ <ion-label floating>Username</ion-label>
+         <ion-input type="text" formControlName="username" name="username"></ion-input>
+    </ion-item>
+<!-- <p [hidden]="myForm.controls.username.valid" danger text-right>username is empty</p> -->
+    <ion-item>
+      <ion-avatar item-left>
+   <img src="assets/img/padlock.png">
+ </ion-avatar>
+ <ion-label floating>Password</ion-label>
+      <ion-input type="password" formControlName="password" name="password"></ion-input>
+    </ion-item>
+<!-- <p [hidden]="myForm.controls.password.valid" danger text-right>password is empty</p> -->
+<p text-center>
+    <button ion-button color="cyient"  [disabled]="!myForm.controls.username.valid || !myForm.controls.password.valid" >Login</button>
+</p>
+ </form>
+  </ion-list>
+  <ion-row>
+     <ion-col text-center >
+<button  class="sizesty"  (click)="register()">New Registration</button>
+     </ion-col>
+     <ion-col text-center >
+<button class="sizesty"  (click)="forgotpwd()" >Forgot Password?</button>
+     </ion-col>
+
+   </ion-row>
+
+
+</ion-card>
+</div>
+</ion-content>
